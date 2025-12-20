@@ -10,11 +10,11 @@
       }
     }
   ],
-  "routes": [
+  "outputDirectory": "frontend_book/build",
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/frontend_book/build/$1",
-      "status": 200
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
