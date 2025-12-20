@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend_book/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontend_book/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/frontend_book/build/$1",
+      "status": 200
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/frontend_book/build/index.html"
+    }
+  ]
+}
